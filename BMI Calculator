@@ -1,0 +1,29 @@
+def BMI():
+    try:
+        weight = float(input("enter weight(kg):"))
+        height = float(input("enter height(m):"))
+        if height>2.5:
+            raise Exception()
+    except:
+        print('pls enter valid height!!!')
+        height = float(input("enter height(m):"))
+    x = (weight/(height**2))
+    print(x)
+    if x <16:
+       print("Severe Thinness")
+    elif 16<x<17:
+        print("moderate thinness")
+    elif 17<x<18.5:
+        print("Mild Thinness")
+    elif 18.5<x<25:
+        print("Normal")
+    elif 25<x<30:
+        print("overweight")
+    elif 30<x<35:
+        print("obese class 1")
+    elif 35<x<40:
+        print("obese class 2")
+    elif x>40:
+        print("obese class 3")
+
+BMI()
